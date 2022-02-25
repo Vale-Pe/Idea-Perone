@@ -1,0 +1,591 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container-area{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+    'header' 
+    'main' 
+    'footer';
+    grid-auto-columns: 1fr;
+    grid-template-rows: 0.9fr 7fr 0.5fr
+    ;  
+}
+
+/* .container-sobreMi {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+    'header header' 
+    'imagen texto' 
+    'footer footer';
+    /* grid-template-columns: repeat (2, 1fr); 
+    grid-template-rows: 1fr 7fr 0.5fr;
+} */
+
+header {
+    grid-area: header;
+    background-color: rgb(255, 160, 122, 50%);
+    display: flex;
+}
+
+.imgLogo {
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight:bolder;
+
+    padding: 10px 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.iconoNav{
+    display: none;
+}
+
+h1{
+    display: block;
+    margin: 10px 0%;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+    font-weight:bold;
+    text-align: center;
+    background-color: transparent;
+}
+
+.bodyInicio{
+    background-image: url(../Assets/Img/Fonoimagen4.jpg);
+    background-repeat: no-repeat;
+    background-size: 140vh;
+    background-position: center;
+}
+
+.mainIndex{
+    grid-area: main;
+}
+.sectionSobreMi{  
+    grid-area: main;
+    display: flex;
+}
+
+.imgSobreMi{
+    /* grid-area: imagen; */
+    display: flex;
+    border: 1vw solid white;
+    background-color: rgba(244,239,188,255);
+    width: 40vw;
+    height: 80vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.imagenSM{
+    display: inline-block;
+    height: 36vw;
+    width: 85vh ;
+}
+
+.sectionTextoSobreMi{
+    /* grid-area: texto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 58vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#SobreMi{
+    /* margin-top:100px; */
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.pSobreMi{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    width: 40vw;
+    /* padding: 0 100px; */
+    text-align: center; 
+}
+
+.mainServicios{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+}
+
+.seccionServicios{
+    display: flex;
+    flex-direction: row;  
+}
+.divServicio{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+    height: 60vh;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: bisque;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.ImgS{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 15px;
+    width:150px;
+}
+
+.pTituloServicio{
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 10px;
+    text-align: center;
+}
+.pServicio {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+div div button{
+    display: none;
+}
+
+.mainLecturas{
+    grid-area: main;
+    background-color: white;
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+
+.seccionLecturas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#paperLecturas{
+    display: inline-block;
+    width: 20vw;
+    height: 30vh;
+    text-align: center;
+}
+
+.imgLecturas{
+    display: inline-block;
+    border: 2px solid rgb(211,118,76);
+    margin: 5px;
+}
+
+.tituloPaper{
+    display: inline-block;
+    width: 20vw;
+    height: 60px;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 14px;
+    color: rgb(48,93,95);
+    align-items: center;
+}
+
+.mainContacto{
+    grid-area: (main);
+    background-color: rgb(249,235,204);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.sectionContacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    align-items: stretch;    
+}
+
+.cuadroNombre{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    width: 98%;
+    height: 30px;
+}
+
+.cuadroMail{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+    
+    border: 3px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    width: 98%;
+    height: 30px;
+}
+
+.cuadroMensaje{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-top: 5px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    background-color: white;
+    width: 98%;
+    height: 100px;
+}
+
+.areaAConsultar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;    
+}
+
+.areas{
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.horario{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.horarioOpcion{
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.queresInfo{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#Enviar{
+    display: inline-block;
+    width: 100px;
+    margin-top: 20px;
+}
+
+#Reset{
+    display: inline-block;
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.iconosContacto{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.icono{
+    display: inline-block;
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: rgb(255, 160, 122, 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgFooter {
+    margin-left: 10px;
+    margin-right: 200px;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px white;
+}
+
+.pFooter{
+    color: grey;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+}
+
+.contactoFooter {
+    color: grey;
+    font-family:'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+@media (max-width: 1024px){
+    nav ul li a{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 180%;
+    }
+    .pSobreMi{
+        font-size: 90%;
+        width: 45vw;
+    }
+    .pTituloServicio{
+        font-size: 140%;
+    }
+    .pServicio{
+        font-size: 90%;
+    }
+    
+    .imgLecturas{
+        height: 40%;
+    }
+    .tituloPaper{
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:768px){
+    nav ul li a{
+        display: none;
+    }
+    
+    .iconoNav{
+        display: inline-block;
+    }
+
+    h1{
+        font-size: 160%;
+    }
+
+    .bodyInicio{
+        background-size: 115vh;
+    }
+
+    .pSobreMi{
+        font-size: 80%;
+        width: 50vw;
+    }
+
+    .ImgS{
+        width: 60%;
+    }
+    .pTituloServicio{
+        font-size: 130%;
+    }
+    .pServicio{
+        font-size: 80%;
+        height: 50%;
+    }
+
+    .imgLecturas{
+        height: 40%;
+    }
+    .tituloPaper{
+        font-size: 10px;
+    }
+    .imgFooter{
+        width: 20px;
+        height: 20px;
+        margin-right: 150px;
+    }
+    .pFooter{
+        font-size: 20px;
+    }
+
+    .contactoFooter{
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 600px){
+    .bodyInicio{
+        background-size: 80vh;
+    }
+
+    .sectionSobreMi{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .imgSobreMi{
+        background-color: transparent;
+        border: none;
+        height: 40vh;
+        /* width: 100vw */
+    }
+
+    .sectionTextoSobreMi{
+        width: 100vw;
+        height: 40vh;
+    }
+
+    #SobreMi{
+        font-size: 150%;
+        margin-top: 10px;
+    }
+    .pSobreMi{
+        width: 90vw;
+        margin-top: 0%;
+        font-size: 70%;
+    }
+
+    .seccionServicios{
+        height: 80%;
+    }
+
+    .divServicio{
+        justify-content: center;
+    }
+    .pTituloServicio{
+        font-size: 120%;
+    }
+
+    .pServicio{
+        display: none;
+    }
+    
+    div div button{
+        display: inline-block;
+        margin: 20px 0%;
+        border: 3px solid #f9ebcc;
+        border-radius: 50%;
+        background-color: #d3764c;
+        box-shadow: 5px 5px 5px white;
+        width: 60px;
+        height: 60px;
+        font-family:'Montserrat', sans-serif;
+        color: white;
+        cursor: pointer;
+    }
+
+    .imgFooter{
+        display: none;
+    }
+    .seccionLecturas{
+        flex-direction: column;
+        width: 100vw;
+        height: 70vh;
+    }
+    #paperLecturas{
+        width: 100vw;
+        height: 5vh;
+
+    }
+    .imgLecturas{
+        display: none;
+    }
+
+    .tituloPaper{
+        width: 90vw;
+        height: auto;
+        text-align: start;
+    }
+    footer{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 420px){
+    .bodyInicio{
+        background-size: 60vh;
+    }
+
+    .imgSobreMi{
+        height: 30vh;
+    }
+
+    .sectionTextoSobreMi{
+        height: 50vh;
+    }
+
+    .seccionServicios{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divServicio{
+        flex-direction: row;
+        width: 100vw;
+        height: auto;
+        margin: 5px;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+
+    .ImgS{
+        margin: 10px 0%;
+        width: 80px;
+    }
+    .pTituloServicio{
+        margin: 0%;
+        font-size: 90%;
+    }
+
+    div div button{
+        margin: 0%;
+    }
+    .pFooter{
+        font-size: 16px;
+    }
+
+    .contactoFooter{
+        font-size: 80%;
+    }
+}
