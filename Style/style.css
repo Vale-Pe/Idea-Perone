@@ -37,6 +37,20 @@ header {
     position: relative;
     width: 64px;
     height: 64px;
+    transition: 2s;
+    animation-name: RotacionLogo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+@keyframes RotacionLogo {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 nav {
@@ -63,6 +77,12 @@ nav ul li a {
     padding: 10px 5px;
     background-color: transparent;
     color: white;
+    cursor: pointer;
+    transition: font-size 2s;
+}
+
+nav ul li a:hover{
+    font-size: 20px;
 }
 
 .iconoNav{
@@ -219,6 +239,14 @@ div div button{
     display: inline-block;
     border: 2px solid rgb(211,118,76);
     margin: 5px;
+    height: 100px;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: height 2s;
+}
+
+.imgLecturas:hover {
+    height: 150px;
 }
 
 .tituloPaper{
@@ -348,7 +376,8 @@ div div button{
 
 footer{
     grid-area: footer;
-    background-color: rgb(255, 160, 122, 50%);
+    background-image: linear-gradient(to right, hsl(0, 0%, 100%), rgb(255, 160, 122, 100%));
+    /* background-color: rgb(255, 160, 122, 50%); */
     display: flex;
     justify-content: space-between;
     align-items: center;
