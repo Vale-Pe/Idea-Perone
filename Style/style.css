@@ -13,19 +13,9 @@
     'footer';
     grid-auto-columns: 1fr;
     grid-template-rows: 0.9fr 7fr 0.5fr
+    
     ;  
 }
-
-/* .container-sobreMi {
-    display: grid;
-    height: 100vh;
-    grid-template-areas:
-    'header header' 
-    'imagen texto' 
-    'footer footer';
-    /* grid-template-columns: repeat (2, 1fr); 
-    grid-template-rows: 1fr 7fr 0.5fr;
-} */
 
 header {
     grid-area: header;
@@ -84,7 +74,7 @@ li {
 nav div div ul li a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight:bolder;
 
     padding: 5px 5px;
@@ -156,7 +146,7 @@ h1{
     justify-content: center;
     align-items: center;
     width: 58vw;
-    height: 80vh;
+    /* height: 80vh; */
     overflow: hidden;
 }
 
@@ -169,7 +159,8 @@ h1{
 .pSobreMi{
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 10px;
+    margin-top: 8px;
+    margin-bottom: 0%;
     width: 40vw;
     /* padding: 0 100px; */
     text-align: center; 
@@ -215,6 +206,7 @@ h1{
     font-size: 24px;
     font-weight: bolder;
     margin-top: 10px;
+    margin-bottom: 8px;
     text-align: center;
 }
 .pServicio {
@@ -222,6 +214,7 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
     padding: 10px;
+    margin-bottom: 0%;
     text-align: center;
     overflow: hidden;
 }
@@ -269,7 +262,8 @@ div div button{
 .tituloPaper{
     display: inline-block;
     width: 20vw;
-    height: 60px;
+    /* height: 60px; */
+    margin-bottom: 0%;
     font-family:  'Montserrat', sans-serif;
     font-size: 14px;
     color: rgb(48,93,95);
@@ -286,7 +280,7 @@ div div button{
 .sectionContacto{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -294,10 +288,13 @@ div div button{
 .form{
     display: flex;
     flex-direction: column;
-    width: 45vw;
     font-family: 'Montserrat', sans-serif;
     color: black;
-    align-items: stretch;    
+    /* align-items: stretch;     */
+}
+
+.cuadroNombreMail{
+    display: flex;
 }
 
 .cuadroNombre{
@@ -305,12 +302,11 @@ div div button{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     padding-left: 10px;
-    margin-top: 10px;
+    width: 100%;
+    height: 120%;
     border: 3px solid grey;
     border-radius: 5px;
     background-color: white;
-    width: 98%;
-    height: 30px;
 }
 
 .cuadroMail{
@@ -318,12 +314,12 @@ div div button{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     padding-left: 10px;
-    
+    width: 100%;
+    height: 120%;
     border: 3px solid grey;
     border-radius: 5px;
     background-color: white;
-    width: 98%;
-    height: 30px;
+
 }
 
 .cuadroMensaje{
@@ -332,11 +328,10 @@ div div button{
     font-size: 14px;
     padding-left: 10px;
     padding-top: 5px;
-    margin-top: 5px;
     border: 3px solid grey;
     border-radius: 5px;
     background-color: white;
-    width: 98%;
+    width: 100%;
     height: 100px;
 }
 
@@ -344,41 +339,41 @@ div div button{
     display: flex;
     flex-direction: column;
     margin-top: 10px;    
+    width: 100%;
+    font-size: 100%;
 }
 
 .areas{
     display: inline-block;
-    font-size: 14px;
+    font-size: 87.5%;
     margin-top: 10px;
 }
 
 .horario{
     display: inline-block;
-    margin-top: 20px;
+    font-size: 100%;
 }
 
 .horarioOpcion{
     display: inline-block;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 87.5%;
 }
 
 .queresInfo{
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    font-size: 100%;
 }
 
 #Enviar{
     display: inline-block;
     width: 100px;
-    margin-top: 20px;
+    font-size: 87.5%;
 }
 
 #Reset{
     display: inline-block;
-    width: 100px;
-    margin-left: 50px;
-    margin-top: 20px;
+    width: 120px;
+    font-size: 87.5%;
 }
 
 .iconosContacto{
@@ -390,7 +385,6 @@ div div button{
     display: inline-block;
 }
 
-
 footer{
     grid-area: footer;
     background-image: linear-gradient(to right, hsl(0, 0%, 100%), rgb(255, 160, 122, 100%));
@@ -399,6 +393,7 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
 .imgFooter {
     margin-left: 10px;
     margin-right: 200px;
@@ -423,9 +418,7 @@ footer{
 }
 
 @media (max-width: 1024px){
-    nav ul li a{
-        font-size: 16px;
-    }
+    
     h1{
         font-size: 180%;
     }
@@ -450,12 +443,15 @@ footer{
 }
 
 @media (max-width:768px){
-    nav ul li a{
-        display: none;
+    nav div div ul li a{
+        font-size: 14px;
     }
-    
-    .iconoNav{
-        display: inline-block;
+
+    .nav-link{
+        padding: 0%;
+        margin: 2px 0px;
+        /* border: 1px solid white; */
+        background-color: hsla(0, 0%, 100%, 0.178)
     }
 
     h1{
@@ -585,6 +581,45 @@ footer{
         height: auto;
         text-align: start;
     }
+
+    .cuadroNombre{
+        height: 100%;
+        margin-top: 0%;
+    }
+
+    .cuadroMail{
+        height: 100%;
+        margin-top: 0%;
+    }
+
+    .cuadroMensaje{
+        height: 50px;
+        margin-top: 0%;
+    }
+    .areaAConsultar{
+        font-size: 93.75%;
+    }
+
+    .areas{
+        font-size: 81.25%;
+        margin-top: 4px;
+    }
+
+    .horario{
+        font-size: 93.75%;
+    }
+
+    .horarioOpcion{
+        font-size: 81.25%;
+        margin-top: 4px;
+    }
+
+    .queresInfo{
+        font-size: 93.75%;
+        margin-top: 4px;
+    }
+
+
     footer{
         justify-content: space-around;
     }
