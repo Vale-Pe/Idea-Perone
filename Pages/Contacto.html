@@ -44,46 +44,53 @@
 			  </nav>
 		</header>
 		<main class="mainContacto container-fluid">
-			<h1>Contacto</h1>
+			<div class="tituloContactos">
+				<h1 >Contacto</h1>
+				<div class="iconosRS">
+					<a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="../Assets/Img//MAIL.jpg" alt="Mail" width="32px" ></a></li>
+					<a href="https://www.instagram.com/?hl=es-la"><img src="../Assets/Img/IG.jpg" alt="Instagram" width="32px"></a></li>
+					<a href="https://es-la.facebook.com/"><img src="../Assets/Img/FACE.jpg" alt="Facebook" width="32px"></a></li>
+				</div>
+			</div>
 			<section class="sectionContacto row">
-				<form class="form col-8 container " action="#">
-					<div class="cuadroContacto row ">
-						<div class="cuadroNombreMail row justify-content-center" >
-							<label class="col-lg-4 col-md-5 col-sm-6 mt-md-1 mt-sm-0" for="Nombre" >
+				<form class="form col-sm-9 col-md-8 col-lg-6 container" action="#">
+					<div class="cuadroContacto row gy-2 justify-content-center">
+						<div class="cuadroNombreMail row justify-content-center p-0" >
+							<label class="col-lg-5 col-md-5 col-sm-6 mt-1 mb-sm-1 mb-0" for="Nombre" >
 								<input type="text" name="NOMBRE" class="cuadroNombre" placeholder="Nombre" />
 							</label>
-							<label class="col-lg-4 col-md-5 col-sm-6 mt-md-1 mt-sm-0" for="email">
+							<label class="col-lg-5 col-md-5 col-sm-6 mt-1 mb-sm-1 mb-0" for="email">
 								<input type="email" name="email" class= "cuadroMail" placeholder="Mail"/>
 							</label>
 						</div>
-						<div class="row justify-content-center" > 
-							<label class="col-lg-8 col-md-10 col-sm-12  mt-md-2 mt-sm-1" for="Mensaje">
-								<textarea name="Mensaje" class="cuadroMensaje" placeholder="Mensaje"></textarea>
+						<div class="row justify-content-center p-0" > 
+							<label class="col-lg-10 col-md-10 col-sm-12" for="Mensaje">
+								<textarea name="Mensaje" class="cuadroMensaje mt-1" placeholder="Mensaje"></textarea>
 							</label> 
 						</div>
 					</div>
 					<div class="areaAConsultar row">
 						<div class="row justify-content-center" >
-							<p class="col-lg-8 col-md-10 col-sm-12 mb-0" >Elegí el área a consultar:</p>
+							<p class="col-md-10 col-sm-12 mb-0 " >Elegí el área a consultar:</p>
 						</div>
-						<div class="row justify-content-center" >
-							<div class="areas col-7">Disfagia
+						<div class="row justify-content-center p-0" >
+							<div class="areas col-7 p-0">Disfagia
 								<input type="radio" name="Area" value="Disfagia" >
 							</div>
-							<div class="areas col-7">Audición
+							<div class="areas col-7 p-0">Audición
 								<input type="radio" name="Area" value="Audición">
 							</div>
-							<div class="areas col-7">Voz/Habla
+							<div class="areas col-7 p-0">Voz/Habla
 								<input type="radio" name="Area" value="Voz/Habla" >
 							</div>
 						</div>
 					</div>
 					<div class="row" >
 						<div class="row justify-content-center" >
-							<p class="horario col-lg-8 col-md-10 col-sm-12  mt-2 mb-1">Horario en el que nos podemos comunicar</p>
+							<p class="horario col-md-10 col-sm-12  mt-2 mb-1">Horario en el que nos podemos comunicar</p>
 						</div>
-						<div class="row justify-content-center">
-							<div class="col-7" >
+						<div class="row justify-content-center p-0">
+							<div class="col-7 p-0" >
 								<select name="Horario" id="Horario"  class="horarioOpcion"> 
 									<option value="8a12">8 a 12 Hs.</option>
 									<option value="12a16">12 a 16 Hs.</option>
@@ -93,26 +100,26 @@
 						</div>
 					</div>
 					<div class="queresInfo row justify-content-center"> 
-						<div class="col-lg-8 col-md-10 col-sm-12  mt-2" >
+						<div class="col-md-10 col-sm-12  mt-2" >
 							Queres recibir información sobre nosotros?  
 							<input type="checkbox" name="acepta" value="1">
 						</div>
 					</div>
 					<div class="row justify-content-evenly">
-						<input type="submit" value="ENVIAR" id="Enviar" class="col-2 mt-2 mb-1">
-						<input type="reset" value="RESETEAR" id="Reset" class="col-2 mt-2 mb-1" >
+						<input type="submit" value="ENVIAR" id="Enviar" class="col-1 col-sm-2 mt-2 mb-1 px-1" >
+						<input type="reset" value="RESETEAR" id="Reset" class="col-1 col-sm-2 mt-2 mb-1 px-1" >
 					</div>
 				</form>
-				<div class="iconosContacto col-4 container"><!--Agregar Icono Ig, Face, Mail-->
-					<div class="row justify-content-center">
-						<li class="icono col-lg-3 col-md-7 col-sm-7 align-self-center mt-1"><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="../Assets/Img//MAIL.jpg" alt="Mail" width="70px"></a></li>
-						<li class="icono col-lg-3 col-md-7 col-sm-7 align-self-center mt-1"><a href="https://www.instagram.com/?hl=es-la"><img src="../Assets/Img/IG.jpg" alt="Instagram" width="70px"></a></li>
-						<li class="icono col-lg-3 col-md-7 col-sm-7 align-self-center mt-1"><a href="https://es-la.facebook.com/"><img src="../Assets/Img/FACE.jpg" alt="Facebook" width="70px"></a></li>
+				<div class="iconos col-sm-3 col-md-4 col-lg-6"><!--Agregar Icono Ig, Face, Mail-->
+					<div class="row">
+						<li class="col-lg-4 col-md-11 mt-3 mx-auto p-0"><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img class="mx-auto d-block" src="../Assets/Img//MAIL.jpg" alt="Mail" width="70px" ></a></li>
+						<li class="col-lg-4 col-md-11 mt-3 mx-auto p-0"><a href="https://www.instagram.com/?hl=es-la"><img class="mx-auto d-block" src="../Assets/Img/IG.jpg" alt="Instagram" width="70px"></a></li>
+						<li class="col-lg-4 col-md-11 mt-3 mx-auto p-0"><a href="https://es-la.facebook.com/"><img class="mx-auto d-block" src="../Assets/Img/FACE.jpg" alt="Facebook" width="70px"></a></li>
 					</div>
 				</div>
 			</section>
 		</main>
-	    <footer class="Footer">
+	    <footer class="Footer" id="footerContactos">
 			<img src="../Assets/Letra-F.png" alt="LOGO" width="32px" height="32px" class="imgFooter"> 
 			<p class="pFooter"><strong>FONOAUDIOLOGÍA</strong></p>
 			<p class="contactoFooter">Contacto: +54 9 xxxx xxxxxx</p>

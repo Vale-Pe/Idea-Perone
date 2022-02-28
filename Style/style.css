@@ -83,13 +83,13 @@ nav div div ul li a {
     color: white;
     cursor: pointer;
     transition: background-color 2s;
-    transition: border 2s;
+    /* transition: border 2s; */
     
 }
 
 nav div div ul li a:hover{
     background-color: hsl(0, 0%, 100%, 20%);
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .iconoNav{
@@ -285,6 +285,10 @@ div div button{
     
 }
 
+.iconosRS{
+    display: none;
+}
+
 .form{
     display: flex;
     flex-direction: column;
@@ -366,24 +370,16 @@ div div button{
 
 #Enviar{
     display: inline-block;
-    width: 100px;
+    width: auto;
     font-size: 87.5%;
 }
 
 #Reset{
     display: inline-block;
-    width: 120px;
+    width: auto;
     font-size: 87.5%;
 }
 
-.iconosContacto{
-    display: inline-block;
-    overflow: hidden;
-}
-
-.icono{
-    display: inline-block;
-}
 
 footer{
     grid-area: footer;
@@ -392,6 +388,10 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#footerContactos{
+    background-image: linear-gradient(to right, rgb(249,235,204), rgb(255, 160, 122, 100%));
 }
 
 .imgFooter {
@@ -584,17 +584,14 @@ footer{
 
     .cuadroNombre{
         height: 100%;
-        margin-top: 0%;
     }
 
     .cuadroMail{
         height: 100%;
-        margin-top: 0%;
     }
 
     .cuadroMensaje{
         height: 50px;
-        margin-top: 0%;
     }
     .areaAConsultar{
         font-size: 93.75%;
@@ -619,6 +616,19 @@ footer{
         margin-top: 4px;
     }
 
+    .iconos{
+        display: none;
+    }
+
+    .tituloContactos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .iconosRS{
+        display: inline-block;
+    }
 
     footer{
         justify-content: space-around;
@@ -664,6 +674,30 @@ footer{
     div div button{
         margin: 0%;
     }
+
+    .areaAConsultar{
+        font-size: 87.5%;
+    }
+
+    .areas{
+        font-size: 81.25%;
+        margin-top: 4px;
+    }
+
+    .horario{
+        font-size: 87.5%;
+    }
+
+    .horarioOpcion{
+        font-size: 81.25%;
+        margin-top: 4px;
+    }
+
+    .queresInfo{
+        font-size: 87.5%;
+        margin-top: 4px;
+    }
+    
     .pFooter{
         font-size: 16px;
     }
