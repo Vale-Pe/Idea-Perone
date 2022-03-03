@@ -171,29 +171,31 @@ h1{
 .mainServicios{
     grid-area: main;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     background-color: white;
     justify-content: center;
 }
 
-.seccionServicios{
+/* .seccionServicios{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-.divServicio{
+    justify-content: center;   
+}*/
+
+.divServicio{ 
     display: flex;
     flex-direction: column;
-    background-color: white;
+    flex-wrap: nowrap;
     width: 30%;
+    /* height: 60vh; */
+    /* width: 30%;
     height: 60vh;
     margin: 10px;
-    padding: 10px;
-    overflow: hidden;
+    padding: 10px;*/
+    /* overflow: hidden; */
     background-color: bisque;
     justify-content: start;
     align-items: center;
-
 }
 
 .ImgS{
@@ -201,10 +203,11 @@ h1{
     border: 2px solid black;
     border-radius: 15px;
     width:150px;
+    margin-top: 12px;
 }
 
 .pTituloServicio{
-    display: inline-block;
+    display: block;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 24px;
     font-weight: bolder;
@@ -213,7 +216,7 @@ h1{
     text-align: center;
 }
 .pServicio {
-    display: inline-block;
+    display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
     padding: 10px;
@@ -274,7 +277,7 @@ div div button{
 
 
 .mainContacto{
-    grid-area: (main);
+    grid-area: main;
     background-color: rgb(249,235,204);
     display:flex;
     flex-direction: column;
@@ -545,9 +548,6 @@ footer{
         font-size: 12px;
     }
 
-    .seccionServicios{
-        height: 80%;
-    }
 
     .divServicio{
         justify-content: center;
@@ -678,10 +678,6 @@ footer{
         font-size: 11px;
     }
 
-    .seccionServicios{
-        flex-direction: column;
-        align-items: center;
-    }
 
     .divServicio{
         flex-direction: row;
