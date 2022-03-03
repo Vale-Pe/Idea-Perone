@@ -8,13 +8,13 @@
     width: 100vw;
     height: 100vh;
     grid-template-areas:
-    'header' 
-    'main' 
+    'header'
+    'main'
     'footer';
     grid-auto-columns: 1fr;
     grid-template-rows: 0.9fr 7fr 0.5fr
-    
-    ;  
+
+    ;
 }
 
 header {
@@ -37,7 +37,7 @@ header {
 
 @keyframes RotacionLogo {
     from {
-        transform: rotate(0deg); 
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
@@ -84,7 +84,7 @@ nav div div ul li a {
     cursor: pointer;
     transition: background-color 2s;
     /* transition: border 2s; */
-    
+
 }
 
 nav div div ul li a:hover{
@@ -117,9 +117,10 @@ h1{
 .mainIndex{
     grid-area: main;
 }
-.sectionSobreMi{  
+.sectionSobreMi{
     grid-area: main;
     display: flex;
+    align-items: center;
 }
 
 .imgSobreMi{
@@ -159,11 +160,12 @@ h1{
 .pSobreMi{
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     margin-top: 8px;
     margin-bottom: 0%;
     width: 40vw;
     /* padding: 0 100px; */
-    text-align: center; 
+    text-align: center;
 }
 
 .mainServicios{
@@ -176,7 +178,8 @@ h1{
 
 .seccionServicios{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    justify-content: center;
 }
 .divServicio{
     display: flex;
@@ -226,29 +229,38 @@ div div button{
 .mainLecturas{
     grid-area: main;
     background-color: white;
-    /* width: 100vw; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-evenly;
 }
 
-.seccionLecturas{
+.Paper{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    text-decoration: none;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 14px;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    margin: 0px 8px;
 }
 
-#paperLecturas{
+#paperDisfagia{
+    width: 100%;
+}
+.tituloPaper{
     display: inline-block;
-    width: 20vw;
-    height: 30vh;
+    color: rgb(48,93,95);
     text-align: center;
+    margin: 0px 4px;
 }
 
 .imgLecturas{
     display: inline-block;
     border: 2px solid rgb(211,118,76);
-    margin: 5px;
+    margin-top: 5px;
     height: 100px;
     cursor: pointer;
     transform: scale(1, 1);
@@ -259,16 +271,7 @@ div div button{
     height: 150px;
 }
 
-.tituloPaper{
-    display: inline-block;
-    width: 20vw;
-    /* height: 60px; */
-    margin-bottom: 0%;
-    font-family:  'Montserrat', sans-serif;
-    font-size: 14px;
-    color: rgb(48,93,95);
-    align-items: center;
-}
+
 
 .mainContacto{
     grid-area: (main);
@@ -282,7 +285,7 @@ div div button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .iconosRS{
@@ -342,7 +345,7 @@ div div button{
 .areaAConsultar{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;    
+    margin-top: 10px;
     width: 100%;
     font-size: 100%;
 }
@@ -418,12 +421,12 @@ footer{
 }
 
 @media (max-width: 1024px){
-    
+
     h1{
         font-size: 180%;
     }
     .pSobreMi{
-        font-size: 90%;
+        font-size: 14px;
         width: 45vw;
     }
     .pTituloServicio{
@@ -432,7 +435,7 @@ footer{
     .pServicio{
         font-size: 90%;
     }
-    
+
     .imgLecturas{
         height: 40%;
     }
@@ -463,7 +466,7 @@ footer{
     }
 
     .pSobreMi{
-        font-size: 80%;
+        font-size: 13px;
         width: 50vw;
     }
 
@@ -479,11 +482,18 @@ footer{
     }
 
     .imgLecturas{
-        height: 40%;
+        height: 50%;
     }
+
     .tituloPaper{
-        font-size: 10px;
+        font-size: 12px;
     }
+
+    .tituloContactos{
+        display: flex;
+        justify-content: center;
+    }
+
     .imgFooter{
         width: 20px;
         height: 20px;
@@ -507,27 +517,32 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-    
+
     .imgSobreMi{
         background-color: transparent;
         border: none;
-        height: 40vh;
-        /* width: 100vw */
+        height: 30vh;
+        width: 100%;
+        justify-content: center;
     }
 
+    .imagenSM{
+        height: 150px;
+        width: 150px;
+    }
     .sectionTextoSobreMi{
         width: 100vw;
-        height: 40vh;
+        height: 50vh;
     }
 
     #SobreMi{
-        font-size: 150%;
+        font-size: 140%;
         margin-top: 10px;
     }
     .pSobreMi{
         width: 90vw;
         margin-top: 0%;
-        font-size: 70%;
+        font-size: 12px;
     }
 
     .seccionServicios{
@@ -544,7 +559,7 @@ footer{
     .pServicio{
         display: none;
     }
-    
+
     div div button{
         display: inline-block;
         margin: 20px 0%;
@@ -559,18 +574,21 @@ footer{
         cursor: pointer;
     }
 
-    .imgFooter{
-        display: none;
-    }
     .seccionLecturas{
         flex-direction: column;
+        justify-content: space-between;
         width: 100vw;
         height: 70vh;
     }
-    #paperLecturas{
-        width: 100vw;
-        height: 5vh;
 
+    #paperDisfagia{
+        width: 95vw;
+        height: auto;
+    }
+
+    .Paper{
+        height: auto;
+        border: none;
     }
     .imgLecturas{
         display: none;
@@ -622,12 +640,15 @@ footer{
 
     .tituloContactos{
         display: flex;
-        justify-content: space-around;
         align-items: center;
     }
 
     .iconosRS{
         display: inline-block;
+    }
+
+    .imgFooter{
+        display: none;
     }
 
     footer{
@@ -646,6 +667,15 @@ footer{
 
     .sectionTextoSobreMi{
         height: 50vh;
+    }
+
+    #SobreMi{
+        font-size: 125%;
+        margin: 0px 0px 4px 0px
+    }
+
+    .pSobreMi{
+        font-size: 11px;
     }
 
     .seccionServicios{
@@ -675,6 +705,10 @@ footer{
         margin: 0%;
     }
 
+    .tituloPaper{
+        font-size: 11px;
+    }
+
     .areaAConsultar{
         font-size: 87.5%;
     }
@@ -697,7 +731,7 @@ footer{
         font-size: 87.5%;
         margin-top: 4px;
     }
-    
+
     .pFooter{
         font-size: 16px;
     }
