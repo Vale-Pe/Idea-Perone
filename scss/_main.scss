@@ -1,24 +1,24 @@
-.bodyInicio{
+.mainIndex{
     background-image: url(../Assets/Img/Fonoimagen4.jpg);
     background-repeat: no-repeat;
-    background-size: 140vh;
+    background-size: 130vh;
     background-position: center;
 }
 
 @media (max-width:768px){
-    .bodyInicio{
+    .mainIndex{
         background-size: 115vh;
     }
 }
 
 @media (max-width: 600px){
-    .bodyInicio{
+    .mainIndex{
         background-size: 80vh;
     }
 }
 
 @media (max-width: 420px){
-    .bodyInicio{
+    .mainIndex{
         background-size: 60vh;
     }
 }

@@ -1,0 +1,149 @@
+.mainServicios{
+    grid-area: main;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+
+    div section .divServicio{ 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 30%;
+        background-color: bisque;
+        justify-content: start;
+        align-items: center;
+        height: 60vh;
+
+        img{
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 15px;
+            width:150px;
+            margin-top: 12px;
+        }
+
+        .pTituloServicio{
+            display: block;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: bolder;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        .pServicio {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 100%;
+            padding: 4px;
+            margin-bottom: 0%;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        div button{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .mainServicios{
+        
+        div section .divServicio{
+            img{
+                margin-top: 8px;
+            }
+            .pTituloServicio{
+                font-size: 140%;
+            }
+            .pServicio{
+                font-size: 90%;
+                padding:0%;
+            }
+        } 
+    }    
+}
+
+@media (max-width:768px){
+
+    .mainServicios{
+        
+        div section .divServicio{
+            img{
+                margin-top: 4px;
+                width: 60%;
+            }
+            .pTituloServicio{
+                font-size: 130%;
+            }
+            .pServicio{
+                font-size: 70%;
+                height: 50%;
+            }
+        }  
+    }    
+}
+
+@media (max-width: 600px){
+   .mainServicios{
+       
+        div section .divServicio{
+            justify-content: center;
+
+            .pTituloServicio{
+                font-size: 120%;
+            }
+        
+            .pServicio{
+                display: none;
+            }
+        
+            div button{
+                display: inline-block;
+                margin: 20px 0%;
+                border: 3px solid #f9ebcc;
+                border-radius: 50%;
+                background-color: #d3764c;
+                box-shadow: 5px 5px 5px white;
+                width: 60px;
+                height: 60px;
+                font-family:'Montserrat', sans-serif;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    } 
+}
+
+@media (max-width: 420px){
+    .mainServicios{
+
+        div section .divServicio{
+            flex-direction: row;
+            width: 100vw;
+            height: auto;
+            margin: 5px;
+            padding: 5px;
+            justify-content: space-evenly;
+    
+            img{
+                margin: 10px 0%;
+                width: 80px;
+            }
+            .pTituloServicio{
+                margin: 0%;
+                font-size: 90%;
+            }
+        
+            div button{
+                margin: 0%;
+            }
+        }
+    }
+}
+
+
+
+
+

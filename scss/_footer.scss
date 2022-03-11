@@ -32,40 +32,42 @@ footer{
 
 @media (max-width:768px){
 
-    footer img {
-        width: 20px;
-        height: 20px;
-        margin-right: 150px;
-    }
-    
-    .pFooter{
-        font-size: 20px;
-    }
+    footer{
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 150px;
+        }
 
-    .contactoFooter{
-        font-size: 90%;
-    }
-   
+        .pFooter{
+            font-size: 20px;
+        }
+    
+        .contactoFooter{
+            font-size: 90%;
+        }
+    }   
 }
 
 @media (max-width: 600px){
     
     footer{
         justify-content: space-around;
-    }
 
-    img{
-        display: none;
-    }
+        img{
+            display: none;
+        }
+    }   
 }
 
 @media (max-width: 420px){
-    
-    .pFooter{
-        font-size: 16px;
-    }
-    .contactoFooter{
-        font-size: 80%;
+    footer{
+        .pFooter{
+            font-size: 16px;
+        }
+        .contactoFooter{
+            font-size: 80%;
+        }
     }
 }
 
