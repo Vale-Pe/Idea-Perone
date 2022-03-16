@@ -1,6 +1,6 @@
 .mainContacto{
     grid-area: main;
-    background-color: rgb(249,235,204);
+    background-color: $colorFondoRosa;
     display:flex;
     flex-direction: column;
 
@@ -14,13 +14,17 @@
 
         .iconosRS{
             display: none;
+
+            a{
+                text-decoration: none;
+            }
+            
         }
 
         form{
             display: flex;
             flex-direction: column;
-            font-family: 'Montserrat', sans-serif;
-            color: black;
+            @extend .pBase;
 
             div{
                 .cuadroNombreMail{
@@ -28,41 +32,40 @@
     
                     .cuadroNombre{
                         display: inline-block;
-                        font-family: 'Montserrat', sans-serif;
-                        font-size: 14px;
-                        padding-left: 10px;
+                        @include pBaseConParametros (14px);
+                    
                         width: 100%;
                         height: 120%;
-                        border: 3px solid grey;
-                        border-radius: 5px;
+                        border: 0;
+                        // border-radius: 5px;
                         background-color: white;
+                        box-shadow: 5px 5px 10px $colorContraste;
                     }
         
                     .cuadroMail{
                         display: inline-block;
-                        font-family: 'Montserrat', sans-serif;
-                        font-size: 14px;
-                        padding-left: 10px;
+                        @include pBaseConParametros (14px);
+                    
                         width: 100%;
                         height: 120%;
-                        border: 3px solid grey;
-                        border-radius: 5px;
+                        border: 0;
+                        // border-radius: 5px;
                         background-color: white;
-                    
+                        box-shadow: 5px 5px 10px $colorContraste;
                     }
                 }
             
                 div .cuadroMensaje{
                     display: inline-block;
-                    font-family: 'Montserrat', sans-serif;
-                    font-size: 14px;
-                    padding-left: 10px;
+                    @include pBaseConParametros (14px);
+                    
                     padding-top: 5px;
-                    border: 3px solid grey;
-                    border-radius: 5px;
+                    border: 0;
+                    // border-radius: 5px;
                     background-color: white;
                     width: 100%;
                     height: 100px;
+                    box-shadow: 5px 5px 10px $colorContraste;
                 }
             }   
             
@@ -71,52 +74,86 @@
                 flex-direction: column;
                 margin-top: 10px;
                 width: 100%;
-                font-size: 14px;
+                font-weight: bolder;
+                @include pBaseConParametros (14px);
 
                 .areas{
                     display: inline-block;
-                    font-size: 87.5%;
+                    @include pBaseConParametros (13px);
                     margin-top: 10px;
+                    font-weight: lighter;
                 }
             }
             
                       
             .horario{
                 display: inline-block;
-                font-size: 14px;
+                font-weight: bolder;
+                @include pBaseConParametros (14px);
 
-                select{
+                .horario__Opcion {
                     display: inline-block;
-                    font-size: 87.5%;
+                    @include pBaseConParametros (13px);
+                    border: 0;
+                    border-radius: 10px;
                 }
             }
                        
             .queresInfo{
                 display: flex;
-                font-size: 14px;
+                font-weight: bolder;
+                @include pBaseConParametros (14px);
             }
             
             #Enviar{
                 display: inline-block;
                 width: auto;
-                font-size: 87.5%;
+                font-size: 14px;
+                color: $colorContraste;
+                background-color: white;
+                font-weight: bolder;
+                box-shadow: 0 0 15px 5px $colorContraste;
             }
             
             #Reset{
                 display: inline-block;
                 width: auto;
-                font-size: 87.5%;
+                font-size: 14px;
+                color: $colorContraste;
+                background-color: white;
+                font-weight: bolder;
+                box-shadow: 0 0 15px 5px $colorContraste;
+
             }
         }
             
-        div li a img{
-            display: inline-block;
-        }
+        div li {
+            margin: 0px 5px;
+
+            $mapaRedes: (google: $colorFondoBeige,instagram:$colorFondoRosaMedio,facebook: $colorContraste );
+
+            @each $redes, $color in $mapaRedes {
+                .#{$redes} {
+                    background-color: $color;
+                }                
+            }
+
+
+            button {
+                border:0;
+                border-radius: 50%;
+
+                a svg{
+                    padding: 4px;
+                    display: inline-block;
+                }
+            } 
+        } 
     }
 }
 
 #footerContactos{
-    background-image: linear-gradient(to right, rgb(249,235,204), rgb(255, 160, 122, 100%));
+    background-image: linear-gradient(to right, $colorFondoRosa, rgb(255, 160, 122, 100%));
 }
 
 @media (max-width: 1024px){
@@ -177,7 +214,7 @@
                 }
             }
 
-            div li a img{
+            div li a svg{
                 display: none!important;
             }
         } 
@@ -192,7 +229,7 @@
             form{
 
                 div div .cuadroMensaje{
-                    height: 70px;
+                    height: 70px; 
                 } 
 
                 .areaAConsultar{

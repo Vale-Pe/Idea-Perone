@@ -1,7 +1,6 @@
 .mainServicios{
     grid-area: main;
     display: flex;
-    background-color: white;
     justify-content: center;
 
     div section .divServicio{ 
@@ -16,13 +15,14 @@
 
         img{
             display: inline-block;
-            border: 2px solid black;
+            border: 0;
             border-radius: 15px;
-            width:150px;
+            box-shadow: 0 0 15px 5px grey;
             margin-top: 12px;
+            object-fit: cover;
         }
 
-        .pTituloServicio{
+        h4{
             display: block;
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 24px;
@@ -31,10 +31,11 @@
             margin-bottom: 4px;
             text-align: center;
         }
-        .pServicio {
+
+        p {
             display: block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 100%;
+            @extend .pBase;
+            font-size: 16px;
             padding: 4px;
             margin-bottom: 0%;
             text-align: center;
@@ -53,12 +54,14 @@
         div section .divServicio{
             img{
                 margin-top: 8px;
+                width: 120px;
+                height: 120px;
             }
-            .pTituloServicio{
-                font-size: 140%;
+            h4{
+                font-size: 20px;
             }
-            .pServicio{
-                font-size: 90%;
+            p{
+                font-size: 14px;
                 padding:0%;
             }
         } 
@@ -72,12 +75,11 @@
         div section .divServicio{
             img{
                 margin-top: 4px;
-                width: 60%;
             }
-            .pTituloServicio{
+            h4{
                 font-size: 130%;
             }
-            .pServicio{
+            p{
                 font-size: 70%;
                 height: 50%;
             }
@@ -91,11 +93,16 @@
         div section .divServicio{
             justify-content: center;
 
-            .pTituloServicio{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+
+            h4{
                 font-size: 120%;
             }
         
-            .pServicio{
+            p{
                 display: none;
             }
         
@@ -129,9 +136,8 @@
     
             img{
                 margin: 10px 0%;
-                width: 80px;
             }
-            .pTituloServicio{
+            h4{
                 margin: 0%;
                 font-size: 90%;
             }

@@ -19,20 +19,20 @@
             margin: 0px;    
 
             &:nth-child(6n + 1) {
-                background-color: rgb(249,235,204);
+                background-color: $colorFondoRosa;
             }
             
             &:nth-child(3n + 2) {
-                background-color: rgb(223, 155, 130);
+                background-color: $colorFondoRosaMedio;
             }
             
             
             &:nth-child(2n + 4) {
-                background-color: rgb(238, 216, 180);
+                background-color: $colorFondoBeige;
             }
             
             &:nth-child(5n + 3) {
-                background-color: rgb(204, 163, 140);
+                background-color: $colorContraste;
             }
 
             div{

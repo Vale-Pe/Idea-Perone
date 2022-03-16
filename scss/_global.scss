@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0%;
     padding: 0%;
 }
@@ -21,10 +21,20 @@ h1{
     margin: 10px 0%;
     color: gray;
     font-family: 'Montserrat', sans-serif;
-    font-size: 200%;
+    font-size: 28px;
     font-weight:bold;
     text-align: center;
     background-color: transparent;
+}
+
+.pBase{
+    font-family: 'Montserrat', sans-serif;
+    color:rgba(0, 0, 0, 0.7)
+}
+
+@mixin pBaseConParametros ($size) {
+    @extend .pBase;
+    font-size: $size;
 }
 
 @media (max-width: 1024px){
